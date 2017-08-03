@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNgMavenExampleSuite]">
+  <test name="TestNgMavenTest(failed)">
+    <classes>
+      <class name="POC.Gourab.LoginTest">
+        <methods>
+          <include name="Test"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- POC.Gourab.LoginTest -->
+    </classes>
+  </test> <!-- TestNgMavenTest(failed) -->
+</suite> <!-- Failed suite [TestNgMavenExampleSuite] -->

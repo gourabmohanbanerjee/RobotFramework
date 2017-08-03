@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNgMavenExampleSuite" duration-ms="10654" started-at="2017-08-03T04:53:54Z" finished-at="2017-08-03T04:54:05Z">
+    <groups>
+    </groups>
+    <test name="TestNgMavenTest" duration-ms="10654" started-at="2017-08-03T04:53:54Z" finished-at="2017-08-03T04:54:05Z">
+      <class name="POC.Gourab.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:POC.Gourab.LoginTest@704a52ec]" name="beforeTest" is-config="true" duration-ms="1125" started-at="2017-08-03T10:23:54Z" finished-at="2017-08-03T10:23:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:POC.Gourab.LoginTest@704a52ec]" name="Test" duration-ms="8808" started-at="2017-08-03T10:23:55Z" finished-at="2017-08-03T10:24:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:POC.Gourab.LoginTest@704a52ec]" name="afterTest" is-config="true" duration-ms="715" started-at="2017-08-03T10:24:04Z" finished-at="2017-08-03T10:24:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- POC.Gourab.LoginTest -->
+    </test> <!-- TestNgMavenTest -->
+  </suite> <!-- TestNgMavenExampleSuite -->
+</testng-results>
