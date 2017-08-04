@@ -97,7 +97,7 @@ public class Utility {
          // sends the e-mail
          Transport.send(msg);
          
-         System.out.println("Email have sent successfully!");
+         System.out.println("Email have successfully sent to "+Constants.mailTo);
     }
 	 
 	 public static String readPropertyFile() throws IOException{
