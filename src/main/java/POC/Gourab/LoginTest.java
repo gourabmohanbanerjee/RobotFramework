@@ -27,7 +27,7 @@ public class LoginTest {
 	String propName = "";
 	String action = "";
 	String tData = "";
-	private WebDriver driver;
+	WebDriver driver;
 	ExcelUtility excel = new ExcelUtility();
 	Constants cons = new Constants();
 
@@ -56,17 +56,43 @@ public class LoginTest {
 				action = row[1].trim();
 				tData = row[2].trim();
 
+				//Execute for URL
 				if (action.equals("URL")) {
 					driver.get(tData);
 					writer.println("	driver.get(" + "\"" + tData + "\"" + ");");
-				} else if (action.equals("Click")) {
+				}
+				//Execute for Button click, Submit, Radio Button click, CheckBox click, click links
+				else if (action.equals("Click")) {
 					driver.findElement(By.id(propName)).click();
 					writer.println("	driver.findElement(By.id(" + "\""+ propName + "\"" + ")).click();");
-				} else if (action.equals("Write")) {
+				}
+				//Execute for write text in input field
+				else if (action.equals("Write")) {
 					driver.findElement(By.id(propName)).sendKeys(tData);
 					writer.println("	driver.findElement(By.id(" + "\""+ propName + "\"" + ")).sendKeys(" + "\"" + tData+ "\"" + ");");
 				}
-				//Thread.sleep(2000);
+				//Execute for select item from Dropdown list
+				else if (action.equals("Select")) {
+					Select select = new Select(driver.findElement(By.id(propName)));
+					select.selectByVisibleText(tData);
+					writer.println("	Select select = new Select(driver.findElement(By.id(" + "\""+ propName + "\"" + ");");
+					writer.println("	select.selectByVisibleText(" + "\"" + tData+ "\"" + ");");
+				}
+				//Execute for de-select item from Dropdown list
+				else if (action.equals("Deselect")) {
+					Select select = new Select(driver.findElement(By.id(propName)));
+					select.deselectByVisibleText(tData);
+					writer.println("	Select select = new Select(driver.findElement(By.id(" + "\""+ propName + "\"" + ");");
+					writer.println("	select.deselectByVisibleText(" + "\"" + tData+ "\"" + ");");
+				}
+				//Execute for Mousehover action
+				else if (action.equals("Mousehover")) {
+					Actions action = new Actions(driver);
+					action.moveToElement(driver.findElement(By.id(propName))).build();
+                    writer.println("	Actions action = new Actions(driver);");
+					writer.println("	action.moveToElement(driver.findElement(By.id(" + "\"" + propName+ "\"" + "))).build();");
+				}
+				
 
 			}
 			writer.println(" ");
